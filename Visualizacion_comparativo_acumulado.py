@@ -2,15 +2,15 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-dataset_casos = pd.read_csv("comparativo_casos_acumulados.csv")
-dataset_muertes = pd.read_csv("comparativo_muertes_acumuladas.csv")
+dataset_casos = pd.read_csv("Datos/comparativo_casos_acumulados.csv")
+dataset_muertes = pd.read_csv("Datos/comparativo_muertes_acumuladas.csv")
 
-dias = np.arange(244)
+dias = np.arange(585)
 casos = dataset_casos.iloc[:, 1]
 muertes = dataset_muertes.iloc[:, 1]
 
 plt.title("Covid-19 MX - Comparativo casos-muertes acumuladas")
-plt.suptitle("13 de Enero - 12 de Septiembre 2020", fontsize = 10)
+plt.suptitle("13 de Enero - 25 de Septiembre 2021", fontsize = 10)
 plt.xlabel("Días")
 plt.ylabel("Numero de casos-muertes")
 plt.plot(dias, casos, color = "blue", label = "Número de casos")
